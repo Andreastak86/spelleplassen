@@ -8,18 +8,34 @@
             href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
             rel="stylesheet"
         />
-
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <h1>🎮 JS Game Hub 🎯</h1>
-        <div class="menu">
+        <div id="intro">
+            <p class="typewriter">🟢 Initialiserer JS Game Hub...</p>
+            <p id="coin" class="insert-coin">🪙 INSERT COIN TO START</p>
+        </div>
+
+        <h1 id="title" class="hide">🎮 JS Game Hub 🎯</h1>
+        <div class="menu hide">
             <a href="https://memory-game-livid-one.vercel.app/" target="_blank"
                 >🧠 Memory Game</a
             >
             <a href="https://typing-game-weld-mu.vercel.app/" target="_blank"
                 >⌨️ Typing Challenge</a
             >
+            <a href="https://js-quiz-game-eosin.vercel.app/" target="_blank"
+                >❓ Ready for Quiz?</a
+            >
         </div>
+
+        <script>
+            // Enkel delay for introeffekt
+            setTimeout(() => {
+                document.getElementById("intro").style.display = "none";
+                document.getElementById("title").classList.remove("hide");
+                document.querySelector(".menu").classList.remove("hide");
+            }, 2500);
+        </script>
     </body>
 </html>
